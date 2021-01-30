@@ -1,4 +1,4 @@
-The following R scripts were used for the analysis performed in the manuscript <preprint link>. The analysis consisted of using the BrainEac and GTEx datasets. 
+The following R scripts were used for the analysis performed in the manuscript (https://www.biorxiv.org/content/10.1101/2020.12.16.423140v1). The analysis consisted of using the BrainEac and GTEx datasets. 
 
 Data obtained from BrainEac database is publicly available (http://www.braineac.org/). To run the analysis, BrianEac data is already provided in the data folder. Raw data can be obtained at (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE46706). Pre-processed steps were taken to create the data file. The data file in the Data folder is pre-formatted with demographics, gene expression (RIT2, SYT4 and CA10) and genotype data in one data frame (BrainEac_allRegions_data.csv). 
 
