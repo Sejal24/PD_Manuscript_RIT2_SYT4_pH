@@ -34,7 +34,7 @@ RIT2_region <- ggplot(filter(BE_allRegions,!phOutlier), aes(x = rit2, y = ph, gr
   scale_colour_discrete(name = "rs12456492") + 
   theme(legend.justification = c(1, 0), legend.position = c(1, 0))
 
-ggsave(RIT2_region, filename = here('Figures','Figure 2 pH with RIT2 gene expression across all brain regions.pdf'), height = 6, width = 8.25, dpi=300)
+ggsave(RIT2_region, filename = here('Figures','Figure 4 pH with RIT2 gene expression across all brain regions.pdf'), height = 6, width = 8.25, dpi=300)
 
 SYT4_region <-ggplot(filter(BE_allRegions,!phOutlier), aes(x = syt4, y = ph, group= rs12456492Named,color=rs12456492Named)) +
   geom_point(size=0.3) + facet_wrap( ~ region) + 
@@ -42,4 +42,4 @@ SYT4_region <-ggplot(filter(BE_allRegions,!phOutlier), aes(x = syt4, y = ph, gro
   scale_colour_discrete(name = "rs12456492") + 
   theme(legend.justification = c(1, 0), legend.position = c(1, 0))
 
-ggsave(SYT4_region, filename = here('Figures', 'Figure 3 pH with SYT4 gene expression across all brain regions.pdf'),  height = 6, width = 8.25, dpi=300)
+ggsave(SYT4_region, filename = here('Figures', 'Figure 5 pH with SYT4 gene expression across all brain regions.pdf'),  height = 6, width = 8.25, dpi=300)
