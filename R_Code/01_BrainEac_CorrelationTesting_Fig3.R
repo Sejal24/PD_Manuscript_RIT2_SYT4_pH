@@ -28,7 +28,8 @@ BE_donorStats <- group_by(BE_allRegions, donor) %>% dplyr::summarise(
   brainBank = first(brainBank),
   hasSN = "substantia nigra" %in% region,
   G_allele = first(G_allele), 
-  Allele_Named = first(Allele_Named)
+  Allele_Named = first(Allele_Named),
+  cause_of_death = first(cause_of_death)
 )
 
 #Can write data into a csv file, for future use:
@@ -87,5 +88,5 @@ RIT2_SYT4_pH_plot<- plot_grid(RIT2_avg + theme(legend.position = "none") , SYT4_
 Figure1 <- plot_grid(RIT2_SYT4_pH_plot, get_legend(RIT2_avg), 
                      nrow =1, rel_widths  = c(1, 0.15))
 
-ggsave(Figure1, filename = here('Figures','Figure 1 pH with average RIT2 and SYT4 gene expression.pdf'), height = 4, width = 9.5, dpi=300)
+ggsave(Figure1, filename = here('Figures','Figure 3 pH with average RIT2 and SYT4 gene expression.pdf'), height = 4, width = 9.5, dpi=300)
 
