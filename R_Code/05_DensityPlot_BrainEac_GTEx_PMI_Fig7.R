@@ -22,12 +22,12 @@ pmiBE <- BE_allRegions %>% filter(region=="substantia nigra",!phOutlier) %>% sel
 pmiGT <- GT %>% filter(!phOutlier) %>% select(PMI) %>% mutate( type = "GT")
 plot_pmi_df <- rbind(pmiBE, pmiGT)
 
-Figure5 <- ggplot(plot_pmi_df,aes(x=PMI, fill=type)) + 
+Figure7 <- ggplot(plot_pmi_df,aes(x=PMI, fill=type)) + 
   geom_histogram(aes(y=(..density..),  binwidth = 0.05, position = "dodge", kernel="r" )) +
   theme_bw() +
   theme(legend.title = element_blank(), text = element_text(size = 14)) +
   labs(y="Density")+
   scale_fill_discrete(labels = c("BrainEAC", "GTEx"))
 
-ggsave(Figure5, filename = here('Figures','Figure 5 PMI distribution.pdf'), dpi=300)
+ggsave(Figure7, filename = here('Figures','Figure 7 PMI distribution.pdf'), dpi=300)
 
