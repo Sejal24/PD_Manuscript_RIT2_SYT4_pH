@@ -65,6 +65,6 @@ SYT4_PMI <- ggplot(filter(BE_allRegions,region=="substantia nigra",!phOutlier), 
 RIT2_SYT4_pH_PMIplot<- plot_grid(RIT2_PMI + theme(legend.position = "none") , SYT4_PMI +theme(legend.position = "none"), labels = c('A', 'B'), label_size = 12, nrow=2)
 
 #add legend 
-Figure6 <- plot_grid(RIT2_SYT4_pH_PMIplot, get_legend(SYT4_PMI + theme(legend.position="bottom")), ncol=1, rel_heights = c(1, 0.1))
+Figure8 <- plot_grid(RIT2_SYT4_pH_PMIplot, get_legend(SYT4_PMI + theme(legend.position="bottom")), ncol=1, rel_heights = c(1, 0.1))
 
-ggsave(Figure6, filename = here('Figures', 'Figure 6 PMI RIT2 and SYT4 gene expression vs pH in SN.pdf'), dpi=300)
+ggsave(Figure8, filename = here('Figures', 'Figure 8 PMI RIT2 and SYT4 gene expression vs pH in SN.pdf'), dpi=300)
