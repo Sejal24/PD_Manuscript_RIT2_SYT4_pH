@@ -85,8 +85,8 @@ SYT4_avg <- ggplot(filter(BE_donorStats), aes(x = syt4, y = ph, colour=phOutlier
 RIT2_SYT4_pH_plot<- plot_grid(RIT2_avg + theme(legend.position = "none") , SYT4_avg +theme(legend.position = "none"), labels = c('A', 'B'), label_size = 12)
 
 #add legend 
-Figure1 <- plot_grid(RIT2_SYT4_pH_plot, get_legend(RIT2_avg), 
+Figure3 <- plot_grid(RIT2_SYT4_pH_plot, get_legend(RIT2_avg), 
                      nrow =1, rel_widths  = c(1, 0.15))
 
-ggsave(Figure1, filename = here('Figures','Figure 3 pH with average RIT2 and SYT4 gene expression.pdf'), height = 4, width = 9.5, dpi=300)
+ggsave(Figure3, filename = here('Figures','Figure 3 pH with average RIT2 and SYT4 gene expression.pdf'), height = 4, width = 9.5, dpi=300)
 
