@@ -66,7 +66,7 @@ RIT2_SYT4_pH_Genderplot <- plot_grid(RIT2_MF + theme(legend.position = "none") ,
 #add legend 
 Figure4 <- plot_grid(RIT2_SYT4_pH_Genderplot, get_legend(SYT4_MF + theme(legend.position="bottom")), ncol=1, rel_heights = c(0.5, 0.05))
 
-ggsave(Figure4, filename = here('Figures','Figure 4 Gender RIT2 and SYT4 gene expression vs pH in SN.pdf'), dpi=300)
+ggsave(Figure4, filename = here('Figures','Figure 6 Gender RIT2 and SYT4 gene expression vs pH in SN.pdf'), dpi=300)
 
 
 ##NOTE: Above analysis can also be run with GTEx data
